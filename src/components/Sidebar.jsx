@@ -41,7 +41,10 @@ function Sidebar() {
               <div key={item.title}>
                 <p className='text-gray-700 m-3 mt-4 uppercase'>{item.title}</p>
                 {item.links.map((link) => (
-                  <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar}
+                  <NavLink
+                    to={`/${link.name}`}
+                    key={link.name}
+                    onClick={handleCloseSideBar}
                     className={({ isActive }) => (isActive ? activeLink : normalLink)}
                   >
                     {link.icon}
