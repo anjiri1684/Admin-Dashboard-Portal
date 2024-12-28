@@ -60,9 +60,37 @@ function Ecommerce() {
             <div className='border-r-1 border-color m-4 pr-10'>
               <div>
                 <p>
-                  <span>$93,438</span>
+                  <span className='text-3xl font-semibold'>$93,438</span>
+                  <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full bg-green-400 ml-3 text-xs'>23%</span>
                 </p>
+                <p className='text-gray-500 mt-1'>Budget</p>
               </div>
+
+              <div className='mt-8'>
+                <p>
+                  <span className='text-3xl font-semibold'>$48,438</span>
+                 
+                </p>
+                <p className='text-gray-500 mt-1'>Expense</p>
+              </div>
+              <div className='mt-5'>
+                <SparkLine
+                  id="line-sparkline"
+                  height="80px" width="250px"
+                  color="blue"
+                  data={SparklineAreaData}
+                  type="Line"
+                  currentColor="blue"
+                />                  
+              </div>
+              <div className='mt-10'>
+                <Button
+                  color="white" bgColor="Blue" text="Download Report" borderRadius="10px" />
+              </div>
+            </div>
+            <div>
+              <Stacked
+                width="320px" height="360px" />
             </div>
           </div>
         </div>
